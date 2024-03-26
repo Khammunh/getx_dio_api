@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'views/user_views.dart';
+
 void main() {
   runApp(
     const MyApp(),
@@ -11,10 +13,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("API"),
+    return MaterialApp(
+      title: "Dio API",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: const UserView(),
     );
   }
 }
